@@ -29,6 +29,7 @@ class Header extends Component {
 
   headerContent = () => {
     const { name } = this.state;
+    const { active } = this.props;
     return (
       <header data-testid="header-component">
         <div className="first-header">
@@ -39,9 +40,9 @@ class Header extends Component {
           </div>
         </div>
         <nav className="links-header">
-          <Link data-testid="link-to-search" to="/search">Search</Link>
-          <Link data-testid="link-to-favorites" to="/favorites">Favorites</Link>
-          <Link data-testid="link-to-profile" to="/profile">Profile</Link>
+          <Link data-testid="link-to-search" to="/search"><div className={ active === 'Search' && 'active'}>Search</div></Link>
+          <Link data-testid="link-to-favorites" to="/favorites"><div className={ active === 'Favorites' && 'active'}>Favorites</div></Link>
+          <Link data-testid="link-to-profile" to="/profile"><div className={ active === 'Profile' && 'active'}>Profile</div></Link>
         </nav>
       </header>
     );

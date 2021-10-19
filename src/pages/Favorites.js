@@ -46,7 +46,7 @@ class Favorites extends Component {
     const { loading } = this.state;
     return (
       <>
-        <Header />
+        <Header active="Favorites"/>
         { loading ? <Loading /> : this.favoritasContain() }
       </>
     );

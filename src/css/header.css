@@ -70,7 +70,14 @@ header {
   font-size: 1.5em;
 }
 
-.links-header a:nth-child(1) {
+.links-header a div {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.active {
   background-color: var(--main-green);
   color: white;
 }

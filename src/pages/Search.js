@@ -70,7 +70,7 @@ class Search extends Component {
     const { loading } = this.state;
     return (
       <>
-        <Header />
+        <Header active="Search" />
         { loading ? <Loading /> : this.searchContain() }
       </>
     );

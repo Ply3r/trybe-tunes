@@ -27,7 +27,7 @@ class Profile extends Component {
     const { name, email, description, image } = this.state;
     return (
       <>
-        <Header />
+        <Header active="Profile"/>
         <div data-testid="page-profile">
           <div>
             <img data-testid="profile-image" src={ image } alt={ name } />
