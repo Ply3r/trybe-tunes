@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Loading from './Loading';
 import { addSong, removeSong, getFavoriteSongs } from '../services/favoriteSongsAPI';
+import { FaRegHeart, FaHeart } from 'react-icons/fa'
 
 class MusicCard extends Component {
   constructor(props) {
@@ -16,8 +17,8 @@ class MusicCard extends Component {
     this.checkFavorite();
   }
 
-  handleCheck = ({ target: { name, checked } }) => {
-    this.setState({ [name]: checked }, this.addOrRemove);
+  handleCheck = () => {
+    this.setState(after => ({ favorite: !after.favorite }), this.addOrRemove);
   }
 
   checkFavorite = async () => {
@@ -29,21 +30,21 @@ class MusicCard extends Component {
     }
   }
 
-  addOrRemove = async () => {
+  addOrRemove = () => {
     const { favorite } = this.state;
     const { obj, getFavoritas } = this.props;
     this.setState({ loading: true });
     if (favorite) {
-      await addSong(obj);
+      addSong(obj);
     } else {
-      await removeSong(obj);
+      removeSong(obj);
       getFavoritas();
     }
     this.setState({ loading: false });
   }
 
   trackContain() {
-    const { obj: { trackName, previewUrl, trackId, artworkUrl100 }, index } = this.props;
+    const { obj: { trackName, previewUrl, artworkUrl100 }, index } = this.props;
     const { favorite } = this.state;
     return (
       <div className="musica">
@@ -59,17 +60,9 @@ class MusicCard extends Component {
           O seu navegador não suporta o elemento
           <code>audio</code>
         </audio>
-        <label htmlFor="track-id">
-          Favorita
-          <input
-            name="favorite"
-            checked={ favorite }
-            onChange={ this.handleCheck }
-            id="track-id"
-            data-testid={ `checkbox-music-${trackId}` }
-            type="checkbox"
-          />
-        </label>
+        <div className="heart-fav" onClick={this.handleCheck}>
+          { favorite ? <FaHeart /> : <FaRegHeart />}
+        </div>
       </div>
     );
   }

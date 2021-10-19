@@ -56,5 +56,15 @@
 }
 
 .musica audio {
-  margin: 15px;
+  margin: 50px;
+}
+
+.heart-fav {
+  width: fit-content;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  font-size: 1.3em;
+  cursor: pointer;
+  color: red;
 }
