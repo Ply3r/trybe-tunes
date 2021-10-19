@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import { getUser } from '../services/userAPI';
+import '../css/profile.css'
 
 class Profile extends Component {
   constructor(props) {
@@ -28,8 +29,8 @@ class Profile extends Component {
     return (
       <>
         <Header active="Profile"/>
-        <div data-testid="page-profile">
-          <div>
+        <div className="page-profile">
+          <div className="form-informations">
             <img data-testid="profile-image" src={ image } alt={ name } />
             <h1>{ name }</h1>
             <h2>{ email }</h2>
