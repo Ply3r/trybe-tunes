@@ -1,0 +1,76 @@
+:root {
+  --main-color: #2fc18c;
+  --second-color: #023031;
+  --main-white: #F0F2F5;
+  --main-black: #023031;
+  --main-green: #036B52;
+  --disable-bot: #8fffd6;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 20vh;
+  background-color: var(--second-color);
+}
+
+.first-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 25px;
+  align-items: center;
+  width: 100%;
+  height: 60%;
+}
+
+.user-icon {
+  display: grid;
+  place-items: center;
+  font-size: 1.5em;
+  margin-right: 15px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: white;
+  background-color: var(--main-color);
+}
+
+.header-user {
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  background-color: white;
+}
+
+.header-user-name {
+  font-size: 1.5em;
+}
+
+.links-header {
+  background-color: var(--main-white);
+  height: 40%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.349);
+}
+
+.links-header a {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  border-right: 4px solid white;
+  color: var(--main-black);
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 1.5em;
+}
+
+.links-header a:nth-child(1) {
+  background-color: var(--main-green);
+  color: white;
+}

@@ -1,0 +1,33 @@
+.page-album {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.album-information {
+  align-self: flex-start;
+  width: 50%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.album-information img {
+  width: 300px;
+  height: 300px;
+  margin-bottom: 15px;
+}
+
+.musicas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: auto;
+  padding: 10px 0;
+  height: 90%;
+  width: 50%;
+}
