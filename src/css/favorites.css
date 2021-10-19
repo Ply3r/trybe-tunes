@@ -1,0 +1,19 @@
+.page-favorites {
+  margin-top: 5vh;
+  width: 100vw;
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.page-favorites h2 {
+  margin-bottom: 15px;
+}
+
+.favs {
+  height: 100%;
+  width: 50%;
+  overflow: auto;
+}

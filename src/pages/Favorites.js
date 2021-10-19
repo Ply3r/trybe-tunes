@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Loading from '../components/Loading';
 import MusicCard from '../components/MusicCard';
 import { getFavoriteSongs } from '../services/favoriteSongsAPI';
+import '../css/favorites.css'
 
 class Favorites extends Component {
   constructor(props) {
@@ -27,13 +28,14 @@ class Favorites extends Component {
     const { favoritas } = this.state;
     let elements;
     if (favoritas.length) {
-      elements = favoritas.map((obj) => (
-        <MusicCard key={ obj.trackName } obj={ obj } getFavoritas={ this.getFavoritas } />
+      elements = favoritas.map((obj, index) => (
+        <MusicCard key={ obj.trackName } obj={ obj } index={index + 1} getFavoritas={ this.getFavoritas } />
       ));
     }
     return (
-      <div data-testid="page-favorites">
-        <div>
+      <div className="page-favorites">
+        <h2>Favoritos: </h2>
+        <div className="favs">
           { elements }
         </div>
       </div>
