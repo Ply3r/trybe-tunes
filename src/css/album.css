@@ -24,7 +24,6 @@
 .musicas {
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
   overflow: auto;
   padding: 10px 0;

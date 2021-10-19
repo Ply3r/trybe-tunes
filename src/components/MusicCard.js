@@ -49,7 +49,7 @@ class MusicCard extends Component {
       <div className="musica">
         <p>{ index }</p>
         <img src={ artworkUrl100 } alt="musica-imagem" />
-        <h1>{ trackName }</h1>
+        <h3>{ trackName }</h3>
         <audio
           data-testid="audio-component"
           src={ previewUrl }
