@@ -31,14 +31,19 @@ class Profile extends Component {
         <Header active="Profile"/>
         <div className="page-profile">
           <div className="form-informations">
-            <img data-testid="profile-image" src={ image } alt={ name } />
-            <h1>{ name }</h1>
-            <h2>{ email }</h2>
+            <div className="image-container">
+              <img data-testid="profile-image" src={ image } alt={ name } />
+              <Link to="/profile/edit">
+                <button type="button" className="link">Editar perfil</button>
+              </Link>
+            </div>
+            <h2>Name:</h2>
+            <h3>{ name }</h3>
+            <h2>Email:</h2>
+            <h3>{ email }</h3>
+            <h2>Description: </h2>
             <p>{ description }</p>
           </div>
-          <Link to="/profile/edit">
-            Editar perfil
-          </Link>
         </div>
       </>
     );
