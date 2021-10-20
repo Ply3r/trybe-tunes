@@ -22,9 +22,7 @@ class Album extends Component {
 
   getMusics = async () => {
     const { match: { params: { id } } } = this.props;
-    console.log(id)
     const obj = await getMusics(id);
-    console.log(obj[0])
     this.setState({
       albumName: obj[0].collectionName,
       artistName: obj[0].artistName,
