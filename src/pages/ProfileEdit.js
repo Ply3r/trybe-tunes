@@ -48,6 +48,12 @@ class ProfileEdit extends Component {
     return (
       <div data-testid="page-profile-edit">
         <form>
+          <input
+            name="image"
+            id="edit-input-image"
+            value={ image }
+            onChange={ this.handleChange }
+          />
           <label htmlFor="edit-input-name">
             Name:
             <input
@@ -77,17 +83,7 @@ class ProfileEdit extends Component {
               value={ description }
               onChange={ this.handleChange }
             />
-          </label>
-          <label htmlFor="edit-input-image">
-            Image:
-            <input
-              name="image"
-              id="edit-input-image"
-              data-testid="edit-input-image"
-              value={ image }
-              onChange={ this.handleChange }
-            />
-          </label>
+          </label>     
           <button
             data-testid="edit-button-save"
             disabled={ disabled }
