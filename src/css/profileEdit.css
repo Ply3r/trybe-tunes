@@ -1,0 +1,90 @@
+.page-profile-edit {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  height: 80%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+form h2 {
+  margin-top: 15px;
+}
+
+form textarea {
+  resize: none;
+  width: 90%;
+  padding: 5px;
+  height: 6vh;
+}
+
+form input {
+  width: 90%;
+  font-size: 1.5em;
+  padding: 5px;
+  height: 4vh;
+}
+
+.image-container {
+  margin-bottom: 15px;
+}
+
+.image-container img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.image-container input {
+  padding: 5px;
+  font-size: 1.5em;
+  width: 70%;
+  height: 4vh;
+}
+
+.check {
+  margin-left: 5px;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  font-size: 1.5em;
+  color: var(--main-color);
+}
+
+.times {
+  margin-left: 5px;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  font-size: 1.5em;
+  color: red;
+}
+
+.flex {
+  height: fit-content;
+  display: flex;
+}
+
+.edit-button-save {
+  margin-top: 20px;
+  align-self: center;
+  height: 50px;
+  width: 150px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.5em;
+  color: white;
+  background-color: #003BE5;
+}
+
+.edit-button-save:disabled {
+  cursor: pointer;
+  background-color: #7e9dfa;
+}
