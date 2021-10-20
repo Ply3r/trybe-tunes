@@ -135,7 +135,7 @@ class ProfileEdit extends Component {
       <>
         <Header />
         { loading ? <Loading /> : this.form() }
-        { saved && <Redirect to="/profile" /> }
+        { saved && <Redirect to="/trybe-tunes/profile" /> }
       </>
     );
   }

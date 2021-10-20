@@ -37,7 +37,7 @@ class Profile extends Component {
           <div className="form-informations">
             <div className="image-container">
               <img data-testid="profile-image" src={ hold } alt={ name } />
-              <Link to="/profile/edit">
+              <Link to="/trybe-tunes/profile/edit">
                 <button type="button" className="link">Editar perfil</button>
               </Link>
             </div>

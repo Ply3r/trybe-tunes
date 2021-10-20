@@ -68,7 +68,7 @@ class Login extends Component {
     return (
       <div>
         { loading ? <Loading /> : this.loginPage() }
-        { auth && <Redirect to="/search" /> }
+        { auth && <Redirect to="/trybe-tunes/search" /> }
       </div>
     );
   }

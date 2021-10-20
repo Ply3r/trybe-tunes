@@ -40,9 +40,9 @@ class Header extends Component {
           </div>
         </div>
         <nav className="links-header">
-          <Link data-testid="link-to-search" to="/search"><div className={ active === 'Search' && 'active'}>Search</div></Link>
-          <Link data-testid="link-to-favorites" to="/favorites"><div className={ active === 'Favorites' && 'active'}>Favorites</div></Link>
-          <Link data-testid="link-to-profile" to="/profile"><div className={ active === 'Profile' && 'active'}>Profile</div></Link>
+          <Link data-testid="link-to-search" to="/trybe-tunes/search"><div className={ active === 'Search' && 'active'}>Search</div></Link>
+          <Link data-testid="link-to-favorites" to="/trybe-tunes/favorites"><div className={ active === 'Favorites' && 'active'}>Favorites</div></Link>
+          <Link data-testid="link-to-profile" to="/trybe-tunes/profile"><div className={ active === 'Profile' && 'active'}>Profile</div></Link>
         </nav>
       </header>
     );

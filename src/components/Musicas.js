@@ -10,7 +10,7 @@ class Musicas extends Component {
       <Link
         data-testid={ `link-to-album-${musica.collectionId}` }
         key={ musica.collectionName }
-        to={ `/album/${musica.collectionId}` }
+        to={ `/trybe-tunes/album/${musica.collectionId}` }
       >
         <div className="album-card">
           <img src={ musica.artworkUrl100 } alt={ musica.collectionName } />
