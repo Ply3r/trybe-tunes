@@ -24,7 +24,10 @@ class MusicCard extends Component {
   checkFavorite = async () => {
     const { obj: { trackId } } = this.props;
     const favoriteSongs = await getFavoriteSongs();
-    const favorite = favoriteSongs.find((item) => item.trackId === trackId);
+    let favorite = false;
+    if (favoriteSongs) {
+      favorite = favoriteSongs.find((item) => item.trackId === trackId);
+    }
     if (favorite) {
       this.setState({ favorite: true });
     }
