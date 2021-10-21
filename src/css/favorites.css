@@ -1,11 +1,11 @@
 .page-favorites {
   margin-top: 5vh;
   width: 100vw;
-  height: 75vh;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  transition: 1s ease;
 }
 
 .page-favorites h2 {
@@ -16,4 +16,28 @@
   height: 100%;
   width: 50%;
   overflow: auto;
+}
+
+.buttons-container {
+  position: absolute;
+  top: 25%;
+  left: 40%;
+}
+
+.heigth {
+  height: 100%;
+  width: 100%;
+}
+
+.bot {
+  margin-right: 5px;
+  font-size: 1em;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border: none;
+}
+
+.active-bot {
+  background-color: var(--main-color);
 }

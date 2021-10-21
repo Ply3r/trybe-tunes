@@ -30,3 +30,23 @@
   height: 90%;
   width: 50%;
 }
+
+.musicas::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.musicas::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Handle */
+.musicas::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 30px;
+}
+
+/* Handle on hover */
+.musicas::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

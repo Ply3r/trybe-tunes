@@ -11,6 +11,40 @@
   color: unset;
 }
 
+.grid-card {
+  position: relative;
+  width: 400px;
+  height: 500px;
+  margin: 10px;
+}
+
+.grid-card img {
+  width: 100%;
+}
+
+.grid-card h3 {
+  margin: 5px;
+  font-size: 1.5em;
+}
+
+.grid-card p {
+  display: none;
+}
+
+.grid-card audio {
+  display: none;
+}
+
+.heard-fav-grid {
+  cursor: pointer;
+  position: absolute;
+  top: 4%;
+  right: 5%;
+  color: white;
+  font-size: 2em;
+  text-shadow: 0 0 1em black;
+}
+
 .album-card {
   width: 400px;
   height: 500px;

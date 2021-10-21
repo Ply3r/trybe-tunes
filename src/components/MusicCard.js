@@ -47,10 +47,10 @@ class MusicCard extends Component {
   }
 
   trackContain() {
-    const { obj: { trackName, previewUrl, artworkUrl100 }, index } = this.props;
+    const { obj: { trackName, previewUrl, artworkUrl100 }, index, grid } = this.props;
     const { favorite } = this.state;
     return (
-      <div className="musica">
+      <div className={ grid ? 'grid-card' : 'musica' }>
         <p>{ index }</p>
         <img src={ artworkUrl100 } alt="musica-imagem" />
         <h3>{ trackName }</h3>
@@ -63,7 +63,7 @@ class MusicCard extends Component {
           O seu navegador não suporta o elemento
           <code>audio</code>
         </audio>
-        <div className="heart-fav" onClick={this.handleCheck}>
+        <div className={ grid ? 'heard-fav-grid' : 'heart-fav' } onClick={this.handleCheck}>
           { favorite ? <FaHeart /> : <FaRegHeart />}
         </div>
       </div>
@@ -86,11 +86,15 @@ MusicCard.propTypes = {
     trackId: PropTypes.number.isRequired,
     previewUrl: PropTypes.string.isRequired,
   }).isRequired,
+  index: PropTypes.number,
   getFavoritas: PropTypes.func,
+  grid: PropTypes.bool,
 };
 
 MusicCard.defaultProps = {
   getFavoritas: () => '',
+  index: '',
+  grid: false,
 };
 
 export default MusicCard;
