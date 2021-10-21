@@ -60,7 +60,7 @@ class Search extends Component {
         </h1>
         <div>
           { musicas.length ? <Musicas musicas={ musicas } />
-            : <h1>Nenhum álbum foi encontrado</h1>}
+            : ''}
         </div>
       </div>
     );
