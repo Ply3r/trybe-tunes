@@ -17,6 +17,12 @@ class Search extends Component {
     };
   }
 
+  getFirstAlbuns = async () => {
+    this.setState({ loading: true, artistaBuscado: 'drake' });
+    const results = await searchAlbumsAPI('drake');
+    this.setState({ musicas: results, loading: false });
+  }
+
   handleChange = ({ target: { name, value } }) => {
     this.setState({ [name]: value }, this.buttonIsDisable);
   }
@@ -64,6 +70,10 @@ class Search extends Component {
         </div>
       </div>
     );
+  }
+
+  componentDidMount = () => {
+    this.getFirstAlbuns()
   }
 
   render() {
